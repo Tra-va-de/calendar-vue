@@ -7,13 +7,13 @@ import Day from '@/features/Month/MonthDay.vue'
 const days = ref([])
 const weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 
-const currentWeekDay = new Date().getDay()
-
 const currentMonth = new Date().toLocaleString('default', { month: 'long' })
 const daysCount = new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0).getDate()
 
+const firstMonthWeekDay = new Date(new Date().getFullYear(), new Date().getMonth(), 1).getDay()
 const weekDaysCount = 7
-const emptyStartDays = Array.from({ length: currentWeekDay }, (_, i) => i + 1)
+
+const emptyStartDays = Array.from({ length: firstMonthWeekDay - 1 }, (_, i) => i + 1)
 const emptyEndDays = Array.from(
     { length: weekDaysCount - ((emptyStartDays.length + daysCount) % weekDaysCount) },
     (_, i) => i + 1
