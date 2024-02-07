@@ -1,0 +1,82 @@
+// Accent
+$accent-intense: #291F61;
+$accent-strong: #34228F;
+$accent-bold: #5336E2;
+$accent-moderate: #7257FF;
+$accent-dim: #B4A6FF;
+$accent-muted: #DBD4FF;
+$accent-subtle: #F0EDFF;
+$accent-on: #FFFFFF;
+
+
+// Border
+$border-error: #FF9175;
+$border-disabled: #C1C4C6;
+$border-contrast: #131214;
+$border-interactive-primary: #DADDDE;
+$border-muted: #DADDDE;
+$border-subtle: #E8EBEB;
+
+
+// Foreground
+$fg-base: #9CA3AF; // grey.100 - Primary text/icon color
+$fg-muted: #6B7280; // grey.60 - Secondary text/icon color for medium emphasis
+$fg-subtle: #D1D5DB; // grey.50 - Tertiary text/icon color for low emphasis
+$fg-on-contrast: #FFFFFF; // white - Text/icon color on contrast background color
+$fg-disabled: #9CA3AF; // grey.50 - Disabled text/icon color
+$fg-link: #2563EB; // accent.moderate - Text/icon link color
+$fg-success: #10B981; // green.60 - Success text/icon color
+$fg-warning: #EAB308; // yellow.60 - Warning text/icon color
+$fg-error: #EF4444; // red.60 - Error text/icon color
+$fg-info: #3B82F6; // blue.60 - Info text/icon color
+$fg-danger: #EF4444; // red.60 - Danger text/icon color
+$fg-static-light: #FFFFFF; // white - Consistent light text/icon color for use in different themes
+$fg-static-dark: #4B5563; // grey.70 - Consistent dark text/icon color for use in different themes
+
+
+// Background color
+$bg-canvas: #FFFFFF; // Default page background
+$bg-subtle: #F3F4F6; // Secondary page background (grey.10)
+$bg-muted: #E5E7EB; // Tertiary page background (grey.20)
+$bg-surface: #FFFFFF; // Card background or element background on dim background
+$bg-contrast: #F9FAFB; // Inverse background for emphasis (grey.100)
+
+$bg-interactive-primary: #E5E7EB; // Primary interactive background (grey.20)
+$bg-interactive-secondary: #D1D5DB; // Secondary interactive background (grey.30)
+$bg-interactive-tertiary: #9CA3AF; // Tertiary interactive background (grey.40)
+$bg-disabled: #D1D5DB; // Disabled element background (grey.30)
+
+$bg-success: #D1FAE5; // Success element background (green.10)
+$bg-success-contrast: #10B981; // Success element background with emphasis (green.60)
+$bg-error: #FEE2E2; // Error element background (red.10)
+$bg-error-contrast: #EF4444; // Error element background with emphasis (red.60)
+$bg-warning: #FEF3C7; // Warning element background (yellow.10)
+$bg-warning-contrast: #F59E0B; // Warning element background with emphasis (yellow.30)
+
+$bg-info: #DBEAFE; // Info element background (blue.10)
+$bg-info-contrast: #2563EB; // Info element background with emphasis (blue.60)
+$bg-notification: #EF4444; // Notification background (red.60)
+
+$bg-overlay: rgba(0, 0, 0, 0.7); // Overlay background (e.g., overlay for dialog)
+
+$bg-danger-primary: #F87171; // Primary danger background (red.50)
+$bg-danger-secondary: #EF4444; // Secondary danger background (red.60)
+$bg-danger-tertiary: #DC2626; // Tertiary danger background (red.70)
+
+
+// Social color variables
+$social-apple-primary: #F9FAFB; // Apple primary color (grey.100)
+$social-apple-secondary: #F3F4F6; // Apple secondary color (grey.90)
+$social-apple-tertiary: #E5E7EB; // Apple tertiary color (grey.80)
+
+$social-facebook-primary: #1877F2; // Facebook primary color (facebook.50)
+$social-facebook-secondary: #166FE5; // Facebook secondary color (facebook.60)
+$social-facebook-tertiary: #166FE5; // Adjusted Facebook tertiary color (facebook.70, assuming it's a darker shade)
+
+$social-twitter-primary: #1DA1F2; // Twitter primary color (twitter.50)
+$social-twitter-secondary: #1A94DA; // Twitter secondary color (twitter.60)
+$social-twitter-tertiary: #1992D4; // Twitter tertiary color (twitter.70)
+
+$social-google-primary: #F9FAFB; // Google primary background color (grey.10)
+$social-google-secondary: #E5E7EB; // Google secondary background color (grey.20)
+$social-google-tertiary: #D1D5DB; // Google tertiary background color (grey.30)
