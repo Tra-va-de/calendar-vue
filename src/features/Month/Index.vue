@@ -3,6 +3,8 @@ import { ref } from 'vue'
 import Container from '@/components/Container.vue'
 import Header from '@/components/Header.vue'
 import Day from '@/features/Month/MonthDay.vue'
+import Popup from '@/components/Popup.vue'
+import Event from '@/features/Month/Event.vue'
 
 const days = ref([])
 const weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
@@ -47,6 +49,10 @@ days.value = [
                 </div>
             </div>
         </Container>
+
+        <Popup :show="true">
+            <Event />
+        </Popup>
     </div>
 </template>
 
