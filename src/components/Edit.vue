@@ -1,12 +1,35 @@
 <script setup>
+import { ref } from 'vue'
+
 const props = defineProps({
-    placeholder: String
+    modelValue: {
+        type: [String, Number],
+        default: ''
+    },
+    placeholder: {
+        type: String,
+        default: ''
+    }
 })
+
+const focused = ref(false)
+
+const emits = defineEmits(['update:modelValue'])
 </script>
 
 <template>
-    <div class="edit">
-        <input class="edit__input" type="text" />
+    <div
+        class="edit"
+        :class="{ filled: modelValue !== null && modelValue !== '', focused: focused }"
+    >
+        <input
+            class="edit__input"
+            type="text"
+            :value="modelValue"
+            @input="$emit('update:modelValue', $event.target.value)"
+            @focus="focused = true"
+            @blur="focused = false"
+        />
 
         <div class="edit__placeholder">
             {{ placeholder }}
@@ -26,11 +49,11 @@ const props = defineProps({
     border-radius: $border-radius-m;
 
     &.focused {
-        border: 1px solid $accent-bold;
-        box-shadow: 0 0 0 1px $accent-moderate;
+        border: 1px solid $accent-moderate;
+        box-shadow: $shadow-medium;
     }
 
-    &.focused &__placeholder,
+    &.filled &__placeholder,
     &__input:focus + &__placeholder {
         top: 8px;
         transform: translateY(0);

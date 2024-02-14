@@ -11,9 +11,9 @@ watch(
     () => props.show,
     (show) => {
         if (show) {
-            document.body.style.overflow = 'hidden'
+            document.body.style.display = 'block'
         } else {
-            document.body.style.overflow = 'auto'
+            document.body.style.display = 'hidden'
         }
     }
 )
@@ -30,7 +30,6 @@ const close = () => {
         </div>
     </div>
 </template>
-å
 
 <style scope lang="scss">
 .popup {
@@ -56,7 +55,7 @@ const close = () => {
 
         border-radius: $border-radius-m;
 
-        padding: 10px 20px;
+        padding: 30px 20px;
     }
 }
 </style>

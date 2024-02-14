@@ -26,6 +26,17 @@ days.value = [
     ...Array.from({ length: daysCount }, (_, i) => i + 1),
     ...emptyEndDays.map(() => '')
 ]
+
+// Popup
+const showPopup = ref(false)
+
+const closePopup = () => {
+    showPopup.value = false
+}
+
+const openPopup = () => {
+    showPopup.value = true
+}
 </script>
 
 <template>
@@ -50,7 +61,7 @@ days.value = [
             </div>
         </Container>
 
-        <Popup :show="true">
+        <Popup :show="showPopup" @close="closePopup">
             <Event />
         </Popup>
     </div>
