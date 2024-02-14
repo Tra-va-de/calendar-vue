@@ -5,26 +5,22 @@ const props = defineProps({
     show: Boolean
 })
 
-const emit = defineEmits(['close'])
+const emit = defineEmits(['update:show'])
 
 watch(
     () => props.show,
     (show) => {
         if (show) {
-            document.body.style.display = 'block'
+            document.body.style.overflow = 'hidden'
         } else {
-            document.body.style.display = 'hidden'
+            document.body.style.overflow = 'auto'
         }
     }
 )
-
-const close = () => {
-    emit('close')
-}
 </script>
 
 <template>
-    <div class="popup" @click.self="close">
+    <div v-if="show" class="popup" @click.self="$emit('update:show', false)">
         <div class="popup__content">
             <slot></slot>
         </div>

@@ -28,15 +28,7 @@ days.value = [
 ]
 
 // Popup
-const showPopup = ref(false)
-
-const closePopup = () => {
-    showPopup.value = false
-}
-
-const openPopup = () => {
-    showPopup.value = true
-}
+const showPopup = ref(true)
 </script>
 
 <template>
@@ -61,7 +53,7 @@ const openPopup = () => {
             </div>
         </Container>
 
-        <Popup :show="showPopup" @close="closePopup">
+        <Popup v-model:show="showPopup">
             <Event />
         </Popup>
     </div>
